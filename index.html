@@ -2,6 +2,15 @@
 <html>
     <head>
         <style>
+            @keyframes coloraaa {
+                0% {background-color: gray;}
+                50% {background-color: aqua;}
+                100% {background-color: green;}
+            }
+            @keyframes xuanzhuan {
+                from {transform: rotate(0deg);}
+                to {transform: rotate(1000deg);}
+            }
             .p
             {
                 background-color:blue;
@@ -12,14 +21,50 @@
             {
                 color:red;
             }
+            h1
+            {
+               text-align: center;
+               font-family: 'Times New Roman', Times, serif;
+            }
+            div
+            {
+                width: 300px;
+                border: 10px solid gray;
+                border-radius: 20px;
+                border-style: outset;
+                padding: 25px;
+                margin: 25px;
+                position: absolute;
+                top: 50px;
+                left: 200px;
+                animation: coloraaa 1s ease-in-out infinite alternate;
+            }
+            body{
+                animation: coloraaa 3s ease-in-out infinite alternate;
+            }
+            .imgpos
+            {
+                position: absolute;
+                left: 200px;
+                top: 400px;
+            }
+            .hhh
+            {
+                position: absolute;
+                left: 200px;
+                top: 500px;
+            }
         </style>
+        <title>啊啊啊</title>
 
     </head>
     <body>
         <script>
             document.getElementById('an1').onclick = () => alert('你按了按钮1');
         </script>
-        <h1 class="aaa1" >你好</h1>
-        <button class="p" id="an1" onclick="location.href='index1.html'">这是按钮</button>
+        <div><h1 class="aaa1" >你好</h1></div>
+        <img src="aaa.webp" width="100px" height="100px" class="imgpos" style="animation: xuanzhuan 0.5s ease-in-out infinite;"></img>
+        <button class="p" id="an1" onclick="location.href='index1.html'" style="animation: xuanzhuan 0.5s ease-in-out alternate-reverse;">这是按钮</button>
+        <h2 class="hhh" style="color: blue;">可爱捏</h2>
     </body>
 </html>
